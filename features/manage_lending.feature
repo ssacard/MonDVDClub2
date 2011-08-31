@@ -4,6 +4,7 @@ Feature: Lendings
   I want to keep track of my lendings
 
   Scenario: Use the app for the first time
+    Given I am not registered
     When I go to the home page
     And I click the connect button
     And I allow the app in facebook
