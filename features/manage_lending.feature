@@ -14,7 +14,6 @@ Feature: Lendings
   Scenario: Connect when I have not yet create lendings
     Given I am a registered user
     When I go to the home page
-    And I click the connect button
     Then I should see the form to create a lending
 
 
@@ -57,8 +56,8 @@ Feature: Lendings
   Scenario: Connect when I already have create lendings
     Given I am a registered user
     When I go to the home page
-    And I click the connect button
-    Then I should be on the lending list page
+    Then I should see my lending list
+
 
 
   Scenario: Mark a lending as recovered when there are others ongoing ones
