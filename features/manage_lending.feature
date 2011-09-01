@@ -28,6 +28,32 @@ Feature: Lendings
     And I should see my new lending hilighted on top of the page
 
 
+  Scenario: Get a suggestion for the film name
+    Given I am a registered user
+    When I go to the lending creation page
+    And I fill the film name field with the beggining of a name
+    Then I should see a list of film full names matching it
+    When I click on a suggested film name
+    Then this name must be in the film field
+
+
+  Scenario: Get a suggestion for the user
+    Given I am a registered user
+    When I go to the lending creation page
+    And I fill the user field with the beggining of a name
+    Then I should see a list of user full names matching it taken in the list of names I've already used
+    When I click on a suggested user name
+    Then this name must be in the user field
+    
+
+  Scenario: Create a lending without user and film name
+    Given I am a registered user
+    When I go to the lending creation page
+    And I create the lending without a user and a film name
+    Then I should be warned that both are required
+    And the lending should not be created
+
+
   Scenario: Connect when I already have create lendings
     Given I am a registered user
     When I go to the home page
