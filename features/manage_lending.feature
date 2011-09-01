@@ -67,7 +67,7 @@ Feature: Lendings
     When I go to the lending page
     And I click the "recovered" button of a lending
     Then this lending should not appear in the list anymore
-    And I should be noticed my friend had given back  my item
+    And I should be noticed my friend had given back my item
 
 
   Scenario: Mark a lending as recovered when it's the last ongoing one
@@ -76,3 +76,4 @@ Feature: Lendings
     When I go to the lending page
     And I click the "recovered" button of a lending
     Then I should see the lending creation form
+    And I should be noticed my friend had given back my item
