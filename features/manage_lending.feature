@@ -63,10 +63,11 @@ Feature: Lendings
 
   Scenario: Mark a lending as recovered when there are others ongoing ones
     Given I am a registered user
-    And I have to lendings
+    And I have two lendings
     When I go to the lending page
     And I click the "recovered" button of a lending
     Then this lending should not appear in the list anymore
+    And I should be noticed my friend had given back  my item
 
 
   Scenario: Mark a lending as recovered when it's the last ongoing one
