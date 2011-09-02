@@ -5,7 +5,7 @@ Feature: Lendings
 
   Scenario: Use the app for the first time
     Given I am not registered
-    When I go to the home page
+    When I go to the cover page
     And I click the connect button
     And I allow the app in facebook
     Then I should see the form to create a lending
@@ -13,7 +13,7 @@ Feature: Lendings
 
   Scenario: Connect when I have not yet create lendings
     Given I am a registered user
-    When I go to the home page
+    When I go to the cover page
     Then I should see the form to create a lending
 
 
@@ -55,7 +55,7 @@ Feature: Lendings
 
   Scenario: Connect when I already have create lendings
     Given I am a registered user
-    When I go to the home page
+    When I go to the cover page
     Then I should see my lending list
 
 
